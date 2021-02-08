@@ -14,6 +14,8 @@
 		74FFA27125D11530007A8197 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 74FFA27025D11530007A8197 /* Assets.xcassets */; };
 		74FFA27425D11530007A8197 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 74FFA27325D11530007A8197 /* Preview Assets.xcassets */; };
 		74FFA27725D11530007A8197 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74FFA27525D11530007A8197 /* LaunchScreen.storyboard */; };
+		74FFA28025D11562007A8197 /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FFA27F25D11562007A8197 /* Friend.swift */; };
+		74FFA28325D115AF007A8197 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FFA28225D115AF007A8197 /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		74FFA27325D11530007A8197 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		74FFA27625D11530007A8197 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		74FFA27825D11530007A8197 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		74FFA27F25D11562007A8197 /* Friend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
+		74FFA28225D115AF007A8197 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +65,8 @@
 				74FFA26725D1152F007A8197 /* AppDelegate.swift */,
 				74FFA26925D1152F007A8197 /* SceneDelegate.swift */,
 				74FFA26B25D1152F007A8197 /* ContentView.swift */,
+				74FFA28225D115AF007A8197 /* User.swift */,
+				74FFA27F25D11562007A8197 /* Friend.swift */,
 				74FFA27025D11530007A8197 /* Assets.xcassets */,
 				74FFA27525D11530007A8197 /* LaunchScreen.storyboard */,
 				74FFA27825D11530007A8197 /* Info.plist */,
@@ -150,6 +156,8 @@
 			files = (
 				74FFA26825D1152F007A8197 /* AppDelegate.swift in Sources */,
 				74FFA26A25D1152F007A8197 /* SceneDelegate.swift in Sources */,
+				74FFA28325D115AF007A8197 /* User.swift in Sources */,
+				74FFA28025D11562007A8197 /* Friend.swift in Sources */,
 				74FFA26F25D1152F007A8197 /* FriendFace.xcdatamodeld in Sources */,
 				74FFA26C25D1152F007A8197 /* ContentView.swift in Sources */,
 			);
