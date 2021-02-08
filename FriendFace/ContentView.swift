@@ -13,15 +13,15 @@ struct ContentView: View {
         
     var body: some View {
         NavigationView {
-            // list view to show some data of all users
-            List {
-                ForEach(users, id:\.id) { user in
-                    // TODO: create clear layout for showing some user data in list
-                    Text(user.name)
+            // list view to show some data of each user
+            List(users, id:\.id) { user in
+                NavigationLink(destination: UserDetailView(user: user)) {
+                    UserListView(user: user)
                 }
             }
+            .onAppear(perform: loadData)
+            .navigationBarTitle("Friend Face")
         }
-        .onAppear(perform: loadData)
     }
     
     // MARK: load data from web and decode into custom type
@@ -64,7 +64,7 @@ struct ContentView: View {
                 return
             }
         }.resume()
-    } // function loadData end
+    } // end of function loadData
     
 }
 
