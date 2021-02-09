@@ -49,6 +49,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		746F9EF525D242550092C191 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				74FFA26B25D1152F007A8197 /* ContentView.swift */,
+				74FFA28A25D17C6E007A8197 /* UserAvatar.swift */,
+				74FFA28D25D1896B007A8197 /* UserListView.swift */,
+				74FFA29225D19789007A8197 /* UserDetailView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		746F9EF625D2426B0092C191 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				74FFA28225D115AF007A8197 /* User.swift */,
+				74FFA27F25D11562007A8197 /* Friend.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		74FFA25B25D1152E007A8197 = {
 			isa = PBXGroup;
 			children = (
@@ -70,12 +90,8 @@
 			children = (
 				74FFA26725D1152F007A8197 /* AppDelegate.swift */,
 				74FFA26925D1152F007A8197 /* SceneDelegate.swift */,
-				74FFA26B25D1152F007A8197 /* ContentView.swift */,
-				74FFA28A25D17C6E007A8197 /* UserAvatar.swift */,
-				74FFA28D25D1896B007A8197 /* UserListView.swift */,
-				74FFA29225D19789007A8197 /* UserDetailView.swift */,
-				74FFA28225D115AF007A8197 /* User.swift */,
-				74FFA27F25D11562007A8197 /* Friend.swift */,
+				746F9EF525D242550092C191 /* Views */,
+				746F9EF625D2426B0092C191 /* Model */,
 				74FFA27025D11530007A8197 /* Assets.xcassets */,
 				74FFA27525D11530007A8197 /* LaunchScreen.storyboard */,
 				74FFA27825D11530007A8197 /* Info.plist */,
