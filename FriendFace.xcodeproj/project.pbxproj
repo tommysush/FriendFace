@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7465DD6E25D2ADA9000D33E4 /* FriendDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7465DD6D25D2ADA9000D33E4 /* FriendDetailView.swift */; };
+		7465DD7225D2B23F000D33E4 /* FriendListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7465DD7125D2B23F000D33E4 /* FriendListView.swift */; };
 		74FFA26825D1152F007A8197 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FFA26725D1152F007A8197 /* AppDelegate.swift */; };
 		74FFA26A25D1152F007A8197 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FFA26925D1152F007A8197 /* SceneDelegate.swift */; };
 		74FFA26C25D1152F007A8197 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FFA26B25D1152F007A8197 /* ContentView.swift */; };
@@ -22,6 +24,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7465DD6D25D2ADA9000D33E4 /* FriendDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendDetailView.swift; sourceTree = "<group>"; };
+		7465DD7125D2B23F000D33E4 /* FriendListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendListView.swift; sourceTree = "<group>"; };
 		74FFA26425D1152F007A8197 /* FriendFace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FriendFace.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		74FFA26725D1152F007A8197 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		74FFA26925D1152F007A8197 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -55,7 +59,9 @@
 				74FFA26B25D1152F007A8197 /* ContentView.swift */,
 				74FFA28A25D17C6E007A8197 /* UserAvatar.swift */,
 				74FFA28D25D1896B007A8197 /* UserListView.swift */,
+				7465DD7125D2B23F000D33E4 /* FriendListView.swift */,
 				74FFA29225D19789007A8197 /* UserDetailView.swift */,
+				7465DD6D25D2ADA9000D33E4 /* FriendDetailView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -184,8 +190,10 @@
 				74FFA28325D115AF007A8197 /* User.swift in Sources */,
 				74FFA28E25D1896B007A8197 /* UserListView.swift in Sources */,
 				74FFA29325D19789007A8197 /* UserDetailView.swift in Sources */,
+				7465DD6E25D2ADA9000D33E4 /* FriendDetailView.swift in Sources */,
 				74FFA28025D11562007A8197 /* Friend.swift in Sources */,
 				74FFA26F25D1152F007A8197 /* FriendFace.xcdatamodeld in Sources */,
+				7465DD7225D2B23F000D33E4 /* FriendListView.swift in Sources */,
 				74FFA28B25D17C6E007A8197 /* UserAvatar.swift in Sources */,
 				74FFA26C25D1152F007A8197 /* ContentView.swift in Sources */,
 			);

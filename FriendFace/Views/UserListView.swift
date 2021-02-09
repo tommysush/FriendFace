@@ -18,8 +18,7 @@ struct UserListView: View {
                 .font(.headline)
             
             HStack {
-                Text("work@")
-                Text("\(user.company)")
+                Text("work@\(user.company)")
                     .font(.subheadline)
                 
                 Spacer()
@@ -36,3 +35,9 @@ struct UserListView: View {
             .padding(.horizontal, 15)
     }
 }
+
+//struct UserListView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        UserListView()
+//    }
+//}

@@ -15,7 +15,7 @@ struct ContentView: View {
         NavigationView {
             // list view to show some data of each user
             List(users, id:\.id) { user in
-                NavigationLink(destination: UserDetailView(user: user)) {
+                NavigationLink(destination: UserDetailView(user: user, users: users)) {
                     UserListView(user: user)
                 }
             }

@@ -1,5 +1,5 @@
 //
-//  UserDetailView.swift
+//  FriendDetailView.swift
 //  FriendFace
 //
 //  Created by SuShenghung on 2021/2/9.
@@ -7,12 +7,9 @@
 
 import SwiftUI
 
-struct UserDetailView: View {
+struct FriendDetailView: View {
     // inform current view that the user object does exist
     var user: User
-    
-    // create a custom user array to store matched friends
-    var userFriends: [User]
     
     var body: some View {
         GeometryReader { geo in
@@ -79,9 +76,14 @@ struct UserDetailView: View {
                         .fontWeight(.bold)
                         .italic()
                         .padding(.bottom, 1)
-                    List(userFriends, id:\.id) { friend in
-                        NavigationLink(destination: FriendDetailView(user: friend)) {
-                            FriendListView(user: friend)
+                    List(user.friends, id:\.id) { friend in
+                        HStack {
+                            Image(systemName: "person.2")
+                                .frame(width: 20, height: 20)
+                                .foregroundColor(.blue)
+                                .opacity(0.75)
+                            Text(friend.name)
+                                .font(.subheadline)
                         }
                     }
                 }
@@ -101,29 +103,10 @@ struct UserDetailView: View {
         }
     }
     
-    // MARK: matching friends' data of current user when current view initiates
-    init(user: User, users: [User]) {
-        self.user = user
-        
-        // an empty user array to store matched friend's data
-        var userFriends = [User]()
-        
-        // use current user's friends to loop through all users to find matches
-        for friend in user.friends {
-            if let userFriend = users.first(where: { $0.id == friend.id }) {
-                userFriends.append(userFriend)
-            } else {
-                fatalError("Missing \(friend.name)")
-            }
-        }
-        
-        self.userFriends = userFriends
-    } // end of init function
-    
 }
 
-//struct UserDetailView_Previews: PreviewProvider {
+//struct FriendDetailView_Previews: PreviewProvider {
 //    static var previews: some View {
-//        UserDetailView()
+//        FriendDetailView()
 //    }
 //}
