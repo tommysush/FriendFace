@@ -12,73 +12,93 @@ struct UserDetailView: View {
     var user: User
     
     var body: some View {
-        ScrollView(.vertical) {
-            // part.1: user's avatar, age and status
-            HStack(alignment: .firstTextBaseline) {
-                Text(user.isActive ? "Active" : "Not active")
-                Spacer()
-                UserAvatar(isActive: user.isActive)
-                    .frame(width: 120, height: 120)
-                    .padding(.top, 15)
-                Spacer()
-                Text("Age: \(user.age)")
-            }
-            .font(.subheadline)
-            .foregroundColor(.secondary)
-            .padding(.horizontal, 15)
-            
-            Divider()
-            
-            // part.2: user's company, email, and address
-            Group {
+        GeometryReader { geo in
+            ScrollView(.vertical) {
+                // part.1: user's avatar, age and status
                 HStack(alignment: .firstTextBaseline) {
-                    Text("💼")
-                    Text(user.company).font(.subheadline)
+                    Text(user.isActive ? "Active" : "Not active").italic()
                     Spacer()
-                }
-                HStack(alignment: .firstTextBaseline) {
-                    Text("📧")
-                    Text(user.email).font(.subheadline)
+                    UserAvatar(isActive: user.isActive)
+                        .frame(width: 120, height: 120)
                     Spacer()
+                    Text("Age: \(user.age)").italic()
                 }
-                HStack(alignment: .firstTextBaseline) {
-                    Text("🏠")
-                    Text(user.address).font(.subheadline)
-                    Spacer()
+                .padding([.horizontal, .top], 15)
+                .frame(maxWidth: .infinity)
+                .font(.subheadline)
+                .foregroundColor(user.isActive ? .blue : .secondary)
+                
+                Divider()
+                
+                // part.2: user's company, email, and address
+                VStack {
+                    HStack(alignment: .firstTextBaseline) {
+                        Image(systemName: "briefcase").foregroundColor(.green)
+                            .frame(width: 20, height: 20)
+                        Text(user.company).font(.subheadline)
+                        Spacer()
+                    }
+                    HStack(alignment: .firstTextBaseline) {
+                        Image(systemName: "envelope").foregroundColor(.green)
+                            .frame(width: 20, height: 20)
+                        Text(user.email).font(.subheadline)
+                        Spacer()
+                    }
+                    HStack(alignment: .firstTextBaseline) {
+                        Image(systemName: "house").foregroundColor(.green)
+                            .frame(width: 20, height: 20)
+                        Text(user.address).font(.subheadline)
+                        Spacer()
+                    }
                 }
-            }
-            .frame(maxWidth: .infinity, alignment: .leading)
-            .padding(.horizontal, 15)
-            
-            // part.3: user's about
-            GroupBox(label: Text("About")
+                .padding(.horizontal, 15)
+                .frame(maxWidth: .infinity)
+                
+                Divider()
+                
+                // part.3: user's about
+                VStack(alignment: .leading) {
+                    Text("About")
                         .fontWeight(.bold)
                         .italic()
-                        .padding(.bottom, 2)
-            ) {
-                Text(user.about)
-                    .multilineTextAlignment(.leading)
-            }
-            
-            // part4: user's friends list
-            VStack(alignment: .leading) {
-                Text("Friends")
-                    .fontWeight(.bold)
-                    .italic()
-                    .padding([.horizontal, .top], 15)
-                List(user.friends, id:\.id) { friend in
-                    Text(friend.name)
+                        .padding(.bottom, 1)
+                    Text(user.about)
+                        .multilineTextAlignment(.leading)
                 }
-                .frame(maxHeight: .infinity)
-            }
+                .padding(.horizontal, 15)
+                .frame(maxWidth: .infinity)
+                
+                Divider()
+                
+                // part4: user's friends list
+                VStack(alignment: .leading) {
+                    Text("Friends")
+                        .fontWeight(.bold)
+                        .italic()
+                        .padding(.bottom, 1)
+                    List(user.friends, id:\.id) { friend in
+                        HStack {
+                            Image(systemName: "person.2")
+                                .frame(width: 20, height: 20)
+                                .foregroundColor(.blue)
+                                .opacity(0.75)
+                            Text(friend.name)
+                                .font(.subheadline)
+                        }
+                    }
+                }
+                .padding(.horizontal, 15)
+                .frame(height: geo.size.height * 0.35)
+                
 
-        } // end of scroll view
-        .navigationBarTitleDisplayMode(.inline)
-        .toolbar {
-            ToolbarItem(placement: .principal) {
-                Text(user.name)
-                    .font(.title2)
-                    .fontWeight(.bold)
+            } // end of scroll view
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .principal) {
+                    Text(user.name)
+                        .font(.title2)
+                        .fontWeight(.bold)
+                }
             }
         }
     }
