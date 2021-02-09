@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+// custom avitar view which used in both detail view and list view
 struct UserAvatar: View {
     var isActive: Bool
     

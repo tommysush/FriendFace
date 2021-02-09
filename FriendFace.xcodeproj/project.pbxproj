@@ -56,8 +56,8 @@
 		746F9EF525D242550092C191 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				74FFA26B25D1152F007A8197 /* ContentView.swift */,
 				74FFA28A25D17C6E007A8197 /* UserAvatar.swift */,
+				74FFA26B25D1152F007A8197 /* ContentView.swift */,
 				74FFA28D25D1896B007A8197 /* UserListView.swift */,
 				7465DD7125D2B23F000D33E4 /* FriendListView.swift */,
 				74FFA29225D19789007A8197 /* UserDetailView.swift */,

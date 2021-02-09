@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+// custom row view which is used in ContentView to complete users' list
 struct UserListView: View {
     // inform current view that the user object does exist
     var user: User
@@ -29,7 +30,7 @@ struct UserListView: View {
             .foregroundColor(.secondary)
         }
         
-        // use avatar to identify if use is active or not
+        // use avatar to identify if user is active or not
         UserAvatar(isActive: user.isActive)
             .frame(width: 45, height:45)
             .padding(.horizontal, 15)

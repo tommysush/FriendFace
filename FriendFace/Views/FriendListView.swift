@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+// custom row view which is used in UserDetailView to complete friends' list
 struct FriendListView: View {
     // inform current view that the user object does exist
     var user: User

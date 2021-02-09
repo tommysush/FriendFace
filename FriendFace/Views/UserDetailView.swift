@@ -101,7 +101,7 @@ struct UserDetailView: View {
         }
     }
     
-    // MARK: matching friends' data of current user when current view initiates
+    // MARK: matching friends' data of current user when current view initiates (reference: "Moonshot" project)
     init(user: User, users: [User]) {
         self.user = user
         
